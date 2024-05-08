@@ -1,17 +1,25 @@
-# ======================= Imports
+# 1. ======================= Dependencies
 import os
 import uvicorn
+
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
-# ======================= FastAPI Configuration
+
+# 2. ======================= Constants
+DESCRIPTION = "B-Tocs Python API for ABAP Template"
+VERSION     = "0.1.0"
+
+
+# 3. ======================= FastAPI Configuration
 app = FastAPI(
-    description="B-Tocs API for ABAP Template",
-    version="0.1.0"
+    description=DESCRIPTION,
+    version=VERSION
 )
 
-# ======================= FastAPI Get Examples 
+
+# 4. ======================= FastAPI Get Examples 
 @app.get("/hello", description="Simple get call without parameters")
 async def demo_simple_get():
     return {"message": "Hello SAP"}
@@ -31,7 +39,7 @@ async def demo_get_with_params(value: int, opt_value1: str = None, opt_value2: f
         return HTMLResponse(content=f"<p>{exc}</p>", status_code=400)
 
 
-# ======================= FastAPI Post Example 
+# 5. ======================= FastAPI Post Example 
 class ProcessParams(BaseModel):
     value: str
     count: int = 10
@@ -55,7 +63,7 @@ async def demo_post_with_model_api(data: ProcessParams):
         return HTMLResponse(content=f"<p>{exc}</p>", status_code=400)
 
 
-# ======================= StartUp
+# 6. ======================= StartUp
 if __name__ == "__main__":
     host = os.getenv("API_HOST", "0.0.0.0")
     port = os.getenv("API_PORT", "8000")
