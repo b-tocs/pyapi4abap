@@ -49,14 +49,14 @@ class ProcessParams(BaseModel):
 @app.post("/process", description="Simple POST request like a function module")
 async def demo_post_with_model_api(data: ProcessParams):
     try:
-        if data.offset <= 0 or data.count <= 0:
+        if data.offset < 0 or data.count <= 0:
             return HTMLResponse(content=f"<p>wrong parameters</p>", status_code=400)
         else:
             result = []
-            for index in range(data.offset, data.count):
+            for index in range(data.offset, data.offset + data.count):
                 result.append({
                         "index": index,
-                        "value": f"{data.offset}: {data.value}"
+                        "value": f"{index}: {data.value}"
                     })
             return  result
     except Exception as exc:
