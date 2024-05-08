@@ -43,10 +43,12 @@ In this case the popup inform abaout a HTTP status code 404 (= "not found"). Thi
 
 In section "Test result" a short summary about the request is shown. 
 
-![sm59 test result summary](res/)
+![sm59 test result summary](res/sm59_test_result.jpg)
 
+In section "Response Text" the complete reponse with header and body data will be displayed.
 
+![sm59 result body](res/sm59_test_response.jpg)
 
-You can add a "Path Prefix" to test a API method  
+## Summary
 
-
+You know how a connection from on-premise SAP ABAP system can be established to an external HTTP internet service. If required activate SSL. In case of issues with untrusted certificates SAP transaction STRUST is your best friend.

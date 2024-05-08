@@ -32,3 +32,7 @@ In this step you will create a new project folder based on the pyapi4abap templa
 
 6. Install the requirements: `pip install -r requirements.txt`
 
+
+## Summary
+
+Now you can create new python projects with virtual environments.

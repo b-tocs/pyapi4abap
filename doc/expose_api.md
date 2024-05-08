@@ -1,6 +1,6 @@
 # Expose the API to the internet
 
-The python based API service is running locally now. But a SAP system running in a data center can't use this. In this step the tool NGROK is used to expose the local api to the internet for testing issues.
+The python based API service is running locally now. But a SAP system running in a data center can't use it. In this step the tool NGROK is used to expose the local api to the internet for testing issues.
 
 ## 1. Download 
 

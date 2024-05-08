@@ -1,6 +1,6 @@
 # Start the service and check the API
 
-In this step the python based API service will be started for local testing. You can explore the API endpoints created by the fastapi library and check the code to get this.
+In this step the python based API service will be started for local testing. You can explore the API endpoints created by the [FastAPI library](https://pypi.org/project/fastapi/) and check the code to get this.
 
 ## Start API Service
 
