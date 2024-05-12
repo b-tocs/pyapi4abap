@@ -5,9 +5,15 @@ For the ABAP side take a look to the project B-Tocs ABAP SDK and the demo code.
 
 ## Big Picture
 
+This project handles the following aspects:
+1. Create a python based API
+2. Call this API from SAP ABAP systems
+3. Create a cloud native container for multi target deployment
+
+
 ```mermaid
 flowchart LR
-    subgraph cloud-native-container["Cloud Native Container"]
+    subgraph cloud-native-container["Multi-Target-API"]
         pyapi4abap["Python API for ABAP Service"]
 
     end
@@ -57,17 +63,18 @@ flowchart LR
 
 
 ## Step-By-Step Guide
+1. Crete a python based API
+    1. [Install requirements - python, git, vsc](doc/requirements.md)
+    2. [Create a new python project](doc/new_project.md)
+    3. [Check the code and API](doc/check_code_and_api.md)
+    4. [Expose API to the internet](doc/expose_api.md)
+2. Call this API from SAP ABAP systems 
+    1. [Connect SAP to the API](doc/connect_sap.md)
+    2. [Call the API endpoints from ABAP programs](doc/call_api_from_sap.md)
+    3. [Enable API Debugging](doc/enable_debugging.md)
+3. Create a cloud native container for multi target deployment
+    1. [Build and start local docker container]()
+    2. [Create a container for your api](doc/docker_container.md)
+    3. [Deploy the container to a container registry]()
+    4. [Use an existing container for a target platform]()
 
-1. [Install requirements - python, git, vsc](doc/requirements.md)
-2. [Create a new python project](doc/new_project.md)
-3. [Check the code and API](doc/check_code_and_api.md)
-4. [Expose API to the internet](doc/expose_api.md)
-4. [Connect SAP to the API](doc/connect_sap.md)
-5. [Call the API endpoints from ABAP programs](doc/call_api_from_sap.md)
-6. [Enable Debugging](doc/enable_debugging.md)
-7. [Create a container for your api](doc/docker_container.md)
-
-
-## Further information
-
-- 
