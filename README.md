@@ -14,17 +14,21 @@ This project handles the following aspects:
 
 ```mermaid
 flowchart LR
-    subgraph cloud-native-container["Multi-Target-API"]
+    subgraph cloud-native-container["Multi Target Container"]
         pyapi4abap["Python API for ABAP Service"]
 
     end
 
     subgraph sap["SAP ABAP System"]
-        sap_hello["SAP Demo for /hello - HTTP GET"]
-        sap_check["SAP Demo for /check - HTTP GET with params"]
-        sap_process[SAP Demo for /process - HTTP POST]
+
+        subgraph demo_code["B-Tocs pyapi4abap demo code"]
+            sap_hello["SAP Demo for /hello - HTTP GET"]
+            sap_check["SAP Demo for /check - HTTP GET with params"]
+            sap_process[SAP Demo for /process - HTTP POST]
+        end
+
        
-        subgraph sdk["B-Tocs SDK"]
+        subgraph sdk["B-Tocs ABAP SDK"]
             sdkcore-->pyapi4abap
         end
        
