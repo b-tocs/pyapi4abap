@@ -75,6 +75,6 @@ flowchart LR
 3. Create a cloud native container for multi target deployment
     1. [Build and start local docker container]()
     2. [Create a container for your api](doc/docker_container.md)
-    3. [Deploy the container to a container registry]()
+    3. [Deploy the container image to a container registry]()
     4. [Use an existing container for a target platform]()
 

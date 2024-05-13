@@ -5,8 +5,8 @@ networks:
     driver: bridge
 
 services:
-  apiservice:
-    image: apiservice
+  api:
+    image: pyapi4abap_service
     build:
       context: .
       dockerfile: Dockerfile
