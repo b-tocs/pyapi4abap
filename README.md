@@ -96,8 +96,8 @@ Check the project site of the [B-Tocs ABAP SDK](https://github.com/b-tocs/abap_b
 
 ### How I can add more description and configuration to the swagger UI?
 
-Check the [FastAPI documentaion](https://fastapi.tiangolo.com/).
+Check the [FastAPI documentation](https://fastapi.tiangolo.com/).
 
 
 ----
-last updated: 13.05.2024 mdjoerg
+last updated: 16.05.2024 mdjoerg
